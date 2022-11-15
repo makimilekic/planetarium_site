@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Limbu&display=swap');
+
+*{
+    font-family: 'Noto Sans Limbu', sans-serif;  /*promeni*/
+    font-size: medium;
+    font-weight: 300;
+    color: white;
+    margin: 0;      /*to remove browser default settings*/
+    padding: 0;     /*to remove browser default settings*/  
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(43 40 46); 
+}
+.izgled{
+   
+    position: absolute;
+    background: url(../img/bgPlanetarijum.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index:1;
+    
+}
+.senkaPrekoSlike {
+    position: absolute;
+    background-color: rgb(41 42 45 / 72%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+/********* ZAGLAVLJE ************/
+#zaglavlje {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*.navigacija-mobilni {display:none}*/
+#logo{
+    width: 3rem;  
+    margin-left: 10px;
+}
+.navigacija-desktop{
+    list-style-type: none; /* Removes the bullets*/
+    /* overflow: hidden;*/
+    margin-right: 10px;
+}
+.menu-iteam {
+    display: inline; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line*/
+    float: left; /*Use float to get block elements to float next to each other*/
+}
+.menu-iteam  a {
+    display: block; /*Allows us to specify padding (and height, width, margins, etc. if you want)*/
+    padding: 14px 16px; /* Specify some padding between each <a> element, to make them look good*/
+    text-align: right;
+    text-decoration: none;
+}
+.menu-iteam a:hover {
+    font-style: italic;
+}
+/********* KRAJ ZAGLAVLJA ************/
+
+/*********** KONTAKT**********/
+
+.formaCela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 10px;
+    /* background-color: rgb(50 51 52); */
+    position: relative;
+    z-index: 3;
+}
+.grupa{
+    /* background-color: aqua; */
+    margin: 10px;
+}
+.dugmici{
+    display: flex;
+    flex-direction: row;
+}
+input, select, textarea{
+    width: 100%;
+    color: rgb(43 40 46); 
+}
+.dugme, select, optgroup, option{
+    color: rgb(43 40 46);
+    font-weight: 600;
+}
+
+
+/***** RESPOZIVNOST ******/
+
+@media screen and (max-width: 767px) {
+    /* .navigacija-desktop {display: none;}*/  
+      #zaglavlje {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          float: none;
+          width: 100%;
+      }    
+      #logo{
+          margin-left: 0;
+      }
+      .navigacija-desktop{        
+          margin-right: 0;
+      }
+      .menu-iteam{
+          float: none;      
+      }
+      .menu-iteam a{
+          text-align: center;
+      }
+       
+  }

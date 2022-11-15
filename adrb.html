@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomsko društvo „Ruđer Bošković” </title>
+    <link rel="shortcut icon" href="img/telescope_icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/adrb.css">
+</head>
+<body>
+    <!-- MENI -->
+    <nav>
+        <div id="zaglavlje">
+             <a href="index.html"><img src="img/telescope.png" alt="Slika planetarijuma" id="logo"></a>
+             <!-- <button class="navigacija-mobilni">Meni</button> -->
+             <ul class="navigacija-desktop">
+                 <li class="menu-iteam"><a href="index.html">Početna</a></li>
+                 <li class="menu-iteam"><a href="info.html">Informacije</a></li>                
+                 <li class="menu-iteam"><a href="adrb.html">Astronomsko društvo „Ruđer Bošković”</a></li>
+                 <li class="menu-iteam"><a href="kontakt.html">Kontakt</a></li>
+             </ul>
+         </div>
+     </nav>
+     <!-- KRAJ MENI -->
+     
+     
+    <h1>Astronomsko društvo „Ruđer Bošković”</h1>
+    <div class="deo-1">            
+        <div class="deo-1-1">
+            <p>Astronomsko društvo „Ruđer Bošković” je društvo ljubitelja astronomije u Beogradu. Jedno je od najstarijih astronomskih društava u Evropi i najstarije na Balkanu. Osnovala ga je grupa studenata astronomije 22. aprila 1934. godine. Danas okuplja nekoliko stotina članova, uglavnom ljubitelja astronomije. Osnovni zadatak Društva je popularizacija astronomije.</p>
+            <p>Društvo se bavi se i amaterskim posmatračkim radom. U tu svrhu Društvo je 1964. godine podiglo Narodnu opservatoriju koja se nalazi u specijalno adaptiranoj Despotovoj kuli na Kalemegdanu. </p>
+        </div>
+        <img src="img/DespotovaKula.jpg" alt="Slika Despotove kule." id="slikaKula">
+    </div>
+    <div class="deo-2">
+        <h2>Istorija</h2>
+        <p class="deo-2-2">Godine 1934. grupa studenata Beogradskog univerziteta odlučila je da pokrene Astronomsko društvo orijentisano na izučavanje astronomije i njenu popularizaciju. Od 1935. godine do Drugog svetskog rata Društvo je izdavalo časopis Saturn u 12 brojeva godišnje, organizovalo popularna predavanja i posmatranja nebeskih tela i pojava. Posle okupacije zemlje 1941. zabranjem im je rad.</p>
+        <div class="deo-2-1">
+            <p class="deo-2-2" class="slika">Društvo je nastavilo sa svojim aktivnostima 1951. godine, pod nazivom Beogradski astronomski klub, a od 1953. pod imenom Astronomsko društvo „Ruđer Bošković“ i počelo da izdaje časopis „Vasiona". Časopis izlazi u četiri broja godišnje. U svakom broju donosi vesti iz astronomije i vesti o dešavanjima u Društvu. Izlazi više od pola veka i najstariji je naučno-popularni časopis u oblasti prirodnih nauka u Srbiji. Jedini je javni izvor astronomskih efemerida u Srbiji. Zahvaljujući velikoj aktivnosti svojih članova i pomoći Grada Beograda, godine1964. počinje sa radom Narodna opservatorija koja je smeštena u Despotovoj kuli na Kalemegdanu. Na terasi Opservatorije nalazi se teleskop Zeiss, refraktor (110/2050 mm), i teleskop Tall 200 K (200/2000 mm), reflektor.</p>
+            <img src="img/vasiona.jpg" alt="Slika časopisa." id="slikaVasiona">
+        </div>     
+    </div>
+    <div class="formaCela">
+        <p class="deo-1-1">Astronomsko društvo „Ruđer Bošković” organizuje događaje koji su besplatni.</p>
+        <h2>Prijavi se!</h2>
+        <form>
+          <div class="grupa">
+            <input type="deo" placeholder="Ime i prezime" size="22" name="ime" id="ime">
+          </div>
+          <div class="grupa">
+            <input type="email" placeholder="Email" size="22" name="email" id="email">
+          </div>
+          <div class="grupa">
+            <p>Vi ste:</p>
+            <input type="radio" name="tip" id="">Srednjškolac
+            <input type="radio" name="tip" id="">Student
+            <input type="radio" name="tip" id="">Ostali            
+         </div>
+          <div class="grupa">
+            <p>Događaji za koji želite da se prijavite:</p>
+            <input type="checkbox" name="iz" id="option1">Razgledanje astronomskog neba petkom i subotom od 21:00-22:00h <br>
+            <input type="checkbox" name="iz" id="option2">Kurs astronomije; program od aprilu do juna i od septembra do novembra<br>
+            <input type="checkbox" name="iz" id="option3">Radionica: Letnji astronomski susreti<br>
+            <input type="checkbox" name="iz" id="option4">Astronomski vikendi u junu<br>
+            <input type="checkbox" name="iz" id="option5">Panoramsko razgledanje sa kule na Kalemegdanu<br>
+            <input type="checkbox" name="iz" id="option6">Letnja škola astronomije<br> 
+          </div>
+          <div class="dugmici">
+            <input type="submit" value="Pošalji upit" onclick="submitForm()" class="dugme" id="dugmeSubmit">
+            <input type="reset" value="Obriši upit" class="dugme">  
+          </div>
+        </form>
+    </div>
+    <script src="js/proba.js"></script>    
+</body>
+</html>
