@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Limbu&display=swap');
 *{
-    /*Bezveze komentar*/
-    font-family: 'Noto Sans Limbu', sans-serif;  /*promeni*/
+    font-family: 'Noto Sans Limbu', sans-serif;  
     font-size: medium;
     font-weight: 300;
     color: white;
@@ -13,48 +12,44 @@ body{
     height: 100vh;
     background-color: rgb(43 40 46);
 }
+/********* ZAGLAVLJE ************/
+
+#header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    width: 7vh;  
+    margin-left: 10px;
+}
+.menu{
+    list-style-type: none; /* Removes the bullets*/
+    margin-right: 10px;
+}
+.menu-iteam {
+    /* ne treba?
+    /*display: inline; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line*/
+    float: left; /*Use float to get block elements to float next to each other*/
+}
+.menu-iteam  a {
+    padding: 14px 16px; /* Specify some padding between each <a> element, to make them look good*/
+    text-decoration: none; 
+}
+.menu-iteam a:hover {
+    font-style: italic;
+}
+/********* KRAJ ZAGLAVLJA ************/
 .content {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
 }
-/********* ZAGLAVLJE ************/
-#zaglavlje {
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-/*.navigacija-mobilni {display:none}*/
-#logo{
-    width: 3rem;  
-    margin-left: 10px;
-}
-.navigacija-desktop{
-    list-style-type: none; /* Removes the bullets*/
-    /* overflow: hidden;*/
-    margin-right: 10px;
-}
-.menu-iteam {
-    display: inline; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line*/
-    float: left; /*Use float to get block elements to float next to each other*/
-}
-.menu-iteam  a {
-    display: block; /*Allows us to specify padding (and height, width, margins, etc. if you want)*/
-    padding: 14px 16px; /* Specify some padding between each <a> element, to make them look good*/
-    text-align: right;
-    text-decoration: none;
-}
-.menu-iteam a:hover {
-    font-style: italic;
-}
-/********* KRAJ ZAGLAVLJA ************/
-
   /********* h1 i slika planetarijuma ************/
-.izgledNaslova{
+.title{
     width: 100vw;
     position: relative;
     background: url(../img/bgPlanetarijum.jpg);
@@ -72,8 +67,8 @@ body{
     position: relative;/* ubacila si position relative jer ti nije radio z-index bez positiona (na netu si nasla) */
     color: white;    
     font-size: 80px;
-    text-align: center;
     font-weight: 600;
+    text-align: center;
     padding:120px 10px;
     z-index: 3;
 }
@@ -81,15 +76,9 @@ body{
 p{    
     margin: 7px;
     padding: 10px;
-    text-align: left;
 }
-.paragraf{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 5px;
-    margin: auto;
+.paragraph{
+    margin: auto; /*iz .content justify-content: space-between; da ne bi paragraf bio skroz dole a da bi slika bila uz nav*/
     border-radius: 50px 40px ;
     background-color: rgb(50 51 52);
     width: 98% 
@@ -97,28 +86,32 @@ p{
 
 /***** RESPOZIVNOST ******/
 
-@media screen and (max-width: 767px) {
-  /* .navigacija-desktop {display: none;}*/  
-    #zaglavlje {
+@media screen and (max-width: 768px) {
+    #header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        float: none;
 		width: 100%;
+        height: auto;
     }    
     #logo{
         margin-left: 0;
     }
-    .navigacija-desktop{        
+    .menu{        
         margin-right: 0;
     }
     .menu-iteam{
         float: none;      
-    }
+    } 
     .menu-iteam a{
+        display: block; /*Prikazuje element kao blok element (kao <p>). Počinje na novom redu i zauzima celu širinu*/
         text-align: center;
     }
     h1{
         font-size: 20px;
     } 
+    .content{
+        gap: 5px; /*proveri iphone 12*/
+    }
 }
+

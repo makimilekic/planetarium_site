@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Limbu&display=swap');
-
 *{
-    font-family: 'Noto Sans Limbu', sans-serif;  /*promeni*/
+    font-family: 'Noto Sans Limbu', sans-serif;  
     font-size: medium;
     font-weight: 300;
     color: white;
@@ -10,38 +9,39 @@
     box-sizing: border-box;
 }
 body{
+    height: 100vh;
     background-color: rgb(43 40 46);
 }
 /********* ZAGLAVLJE ************/
-#zaglavlje {
+
+#header {
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-/*.navigacija-mobilni {display:none}*/
 #logo{
-    width: 3rem;  
+    width: 7vh;  
     margin-left: 10px;
 }
-.navigacija-desktop{
+.menu{
     list-style-type: none; /* Removes the bullets*/
-    /* overflow: hidden;*/
     margin-right: 10px;
 }
 .menu-iteam {
-    display: inline; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line*/
+    /* ne treba?
+    /*display: inline; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line*/
     float: left; /*Use float to get block elements to float next to each other*/
 }
 .menu-iteam  a {
-    display: block; /*Allows us to specify padding (and height, width, margins, etc. if you want)*/
     padding: 14px 16px; /* Specify some padding between each <a> element, to make them look good*/
-    text-align: right;
-    text-decoration: none;
+    text-decoration: none; 
 }
 .menu-iteam a:hover {
     font-style: italic;
 }
 /********* KRAJ ZAGLAVLJA ************/
+
 /*************** TABELA ***************/
 td {
     padding: 15px;
